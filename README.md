@@ -1,74 +1,72 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# 🛒 VendorNest - Grocery Products Web Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**VendorNest** is a full-stack web portal designed to bridge the gap between grocery **vendors** and **suppliers**. The platform ensures transparency, trust, and convenience by enabling verified suppliers to offer real-time product availability, pricing, and documentation to vendors.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌟 Features
 
-### `npm start`
+### 🔐 Authentication
+- **Vendor Login/Signup**: Username, password-based login.
+- **Supplier Login/Signup**: Mobile number, GSTIN, Aadhaar card upload for verification.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🏠 Landing Page
+- Welcome page with `VendorNest` branding, title, description.
+- Toggle buttons to navigate to **Vendor Login** or **Supplier Login**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📊 Vendor Dashboard
+- View list of suppliers:
+  - Verified suppliers appear at the top.
+  - Unverified suppliers at the bottom.
+- See product ratings and prices.
+- Check vendor location status (Open/Closed).
+- Access available products: name, material, price, quantity (kg).
 
-### `npm test`
+### 📦 Supplier Dashboard
+- Add new products.
+- Set price and description.
+- Manage product list.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🗺️ Supplier Detail Page
+- View supplier profile with:
+  - Map and images
+  - Contact details
+  - Location
+  - Bulk purchase options (discounts by quantity)
+  - Verification date
+- Product Table with:
+  - Material Name
+  - Price
+  - Discount Info
+  - Available Quantity (kg)
+  - Your Desired Quantity (kg)
 
-### `npm run build`
+### 💳 Payment Page
+- Displays product details.
+- Select payment type (e.g., UPI, Card, COD).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Frontend:**
+- React.js
+- TailwindCSS / CSS Variables
 
-### `npm run eject`
+**Backend:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Database:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Other:**
+- File Upload (for Aadhaar)
+- Location Services (for map and status)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Getting Started
 
-## Learn More
+### 1. Clone the Repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# VendorNest
->>>>>>> b7ce3e72c213ddb1ae47018ffdf4b4d5719f270d
+```bash
+https://github.com/Charusm03/VendorNest.git
+cd VendorNest
