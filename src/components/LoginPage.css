@@ -1,0 +1,441 @@
+/* LoginPage.css */
+:root {
+  --primary-green: #0A400C;
+  --secondary-green: #819067;
+  --accent-beige: #B1AB86;
+  --light-cream: #FEFAE0;
+  --white: #FFFFFF;
+  --error-red: #D5451B;
+  --warning-orange: #FF9B45;
+  --border-radius: 8px;
+  --shadow: 0 2px 10px rgba(10, 64, 12, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--light-cream);
+  color: var(--primary-green);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Container */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--light-cream);
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: var(--white);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--accent-beige);
+  max-width: 600px;
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: var(--secondary-green);
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* User Type Selection */
+.user-type-selector {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2rem;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--accent-beige);
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+}
+
+.user-type-selector button {
+  flex: 1;
+  background: transparent;
+  color: var(--secondary-green);
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+  position: relative;
+}
+
+.user-type-selector button:hover:not(:disabled) {
+  background: var(--light-cream);
+  color: var(--primary-green);
+}
+
+.user-type-selector button:disabled {
+  background: var(--secondary-green);
+  color: var(--white);
+  cursor: default;
+  border-bottom-color: var(--primary-green);
+}
+
+.user-type-selector button::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--primary-green);
+  transition: width 0.3s ease;
+}
+
+.user-type-selector button:hover:not(:disabled)::after {
+  width: 100%;
+}
+
+/* Form Container */
+.form-container {
+  background: var(--white);
+  border: 1px solid var(--accent-beige);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  max-width: 450px;
+  width: 100%;
+  margin-bottom: 2rem;
+  transition: var(--transition);
+}
+
+.form-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(10, 64, 12, 0.15);
+  border-color: var(--secondary-green);
+}
+
+/* Form Header */
+.form-header {
+  background: linear-gradient(135deg, var(--light-cream) 0%, rgba(177, 171, 134, 0.2) 100%);
+  border-bottom: 1px solid rgba(177, 171, 134, 0.3);
+  padding: 2rem;
+  text-align: center;
+}
+
+.form-header h2 {
+  color: var(--primary-green);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Form Content */
+.form-content {
+  padding: 2rem;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primary-green);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--accent-beige);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  background: var(--light-cream);
+  color: var(--primary-green);
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--secondary-green);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(129, 144, 103, 0.1);
+}
+
+.form-group input::placeholder {
+  color: var(--secondary-green);
+  opacity: 0.7;
+}
+
+/* File Input Styling */
+.form-group input[type="file"] {
+  padding: 0.75rem;
+  background: var(--white);
+  border: 2px dashed var(--accent-beige);
+  cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+  border-color: var(--secondary-green);
+  background: var(--light-cream);
+}
+
+.form-group input[type="file"]:focus {
+  border-style: solid;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: var(--primary-green);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  margin-bottom: 1.5rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--secondary-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(10, 64, 12, 0.2);
+}
+
+.submit-btn:disabled {
+  background: var(--accent-beige);
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+
+/* Toggle Section */
+.toggle-section {
+  text-align: center;
+  color: var(--secondary-green);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: var(--error-red);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.toggle-btn:hover {
+  color: var(--warning-orange);
+}
+
+/* Guest Button */
+.guest-btn {
+  background: linear-gradient(135deg, var(--warning-orange) 0%, var(--error-red) 100%);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.guest-btn:hover {
+  background: linear-gradient(135deg, var(--error-red) 0%, var(--warning-orange) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(213, 69, 27, 0.3);
+}
+
+/* Error States */
+.form-group input.error {
+  border-color: var(--error-red);
+  background: rgba(213, 69, 27, 0.05);
+}
+
+.form-group input.error:focus {
+  box-shadow: 0 0 0 3px rgba(213, 69, 27, 0.1);
+}
+
+/* Success States */
+.form-group input.success {
+  border-color: var(--primary-green);
+  background: rgba(10, 64, 12, 0.05);
+}
+
+.form-group input.success:focus {
+  box-shadow: 0 0 0 3px rgba(10, 64, 12, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1rem;
+  }
+  
+  .header {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .header p {
+    font-size: 1rem;
+  }
+  
+  .form-content {
+    padding: 1.5rem;
+  }
+  
+  .form-header {
+    padding: 1.5rem;
+  }
+  
+  .user-type-selector {
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  .user-type-selector button {
+    padding: 1rem;
+    border-bottom: none;
+    border-right: 3px solid transparent;
+  }
+  
+  .user-type-selector button:disabled {
+    border-right-color: var(--primary-green);
+    border-bottom-color: transparent;
+  }
+  
+  .user-type-selector button::after {
+    bottom: 0;
+    right: -3px;
+    width: 3px;
+    height: 0;
+  }
+  
+  .user-type-selector button:hover:not(:disabled)::after {
+    width: 3px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 0.5rem;
+  }
+  
+  .header {
+    padding: 1.5rem;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .form-content {
+    padding: 1rem;
+  }
+  
+  .form-header {
+    padding: 1rem;
+  }
+  
+  .form-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .form-group input {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .submit-btn {
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+/* Focus States for Accessibility */
+button:focus,
+input:focus {
+  outline: 2px solid var(--secondary-green);
+  outline-offset: 2px;
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-container {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-beige);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-green);
+}
